@@ -8,10 +8,20 @@
 
 using namespace std;
 
+double dist_2p(double p1_x, double p1_y, double p2_x, double p2_y);
 string get_localtime();
 double get_time(void);
 string IntToString(int number);
 void sleep_const_freq(double cycle_start_time, double cycle_end_time, double freq);
+
+double dist_2p(double p1_x, double p1_y, double p2_x, double p2_y)
+{
+    double dist = 0.0;
+
+    dist = sqrt( (p2_x - p1_x)*(p2_x - p1_x) + (p2_y - p1_y)*(p2_y - p1_y) );
+
+    return dist;
+}
 
 string get_localtime()
 {
