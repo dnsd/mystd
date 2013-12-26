@@ -8,11 +8,20 @@
 
 using namespace std;
 
+void CountDown(int count);
 double dist_2p(double p1_x, double p1_y, double p2_x, double p2_y);
 string get_localtime();
 double get_time(void);
 string IntToString(int number);
 void sleep_const_freq(double cycle_start_time, double cycle_end_time, double freq);
+
+void CountDown(int count)
+{
+    for (; count < 0; count--) {
+        cout << count << endl;
+        usleep(1000000);
+    }
+}
 
 double dist_2p(double p1_x, double p1_y, double p2_x, double p2_y)
 {
