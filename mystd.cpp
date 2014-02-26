@@ -32,6 +32,15 @@ double dist_2p(double p1_x, double p1_y, double p2_x, double p2_y)
     return dist;
 }
 
+double dist_2p3D(double p1_x, double p1_y, double p1_z, double p2_x, double p2_y, double p2_z)
+{
+    double dist = 0.0;
+
+    dist = sqrt( (p2_x - p1_x)*(p2_x - p1_x) + (p2_y - p1_y)*(p2_y - p1_y) + (p2_z - p1_z)*(p2_z - p1_z) );
+
+    return dist;
+}
+
 string get_localtime()
 {
     time_t timer;
